@@ -25,7 +25,7 @@ define($cores 16) // Number of cores/queues to use
 // Parameterized generator element class
 elementclass Generator {
     $queue, $sip|
-    FastUDPFlows(RATE 0, LIMIT 200, LENGTH $L, SRCETH $mymac, DSTETH $dmac, SRCIP $sip, DSTIP $dstip, FLOWS 10, FLOWSIZE $N)
+    FastUDPFlows(RATE 0, LIMIT 200, LENGTH $L, SRCETH $mymac, DSTETH $dmac, SRCIP $sip, DSTIP $dstip, FLOWS 1, FLOWSIZE $N)
     //-> MarkMACHeader
     //-> EnsureDPDKBuffer
     -> replay :: MultiReplayUnqueue(STOP -1, ACTIVE false, QUICK_CLONE 1)
